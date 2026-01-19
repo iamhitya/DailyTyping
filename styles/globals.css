@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Outfit:wght@300;400;700&display=swap');
+
+body {
+  background: var(--bg);
+  color: var(--primary);
+  font-family: 'Outfit', sans-serif;
+  transition: background 0.5s ease;
+  overflow-x: hidden;
+}
+
+/* custom scroll bar styles */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cyberpunk Dark (Default) */
+[data-theme='0'] {
+  --bg: #0a0b1e;
+  --secondary: rgba(255, 255, 255, 0.1);
+  --tertiary: #1f2240;
+  --primary: #22d3ee; /* Soft Cyan */
+  --highlight: #bc13fe; /* Pink Neon */
+  --error: #ff0055;
+
+  --fast: #22d3ee;
+  --normal: #bc13fe;
+  --slow: #ff0055;
+
+  --island-bg: rgba(10, 11, 30, 0.6);
+  --island-fg: #22d3ee;
+  --island-border: 1px solid rgba(34, 211, 238, 0.3);
+  --glass-bg: rgba(31, 34, 64, 0.4);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+
+  --shadow-glow: 0 0 20px rgba(34, 211, 238, 0.3);
+}
+
+/* Cyberpunk Light */
+[data-theme='1'] {
+  --bg: #f0f2f5;
+  --secondary: rgba(0, 0, 0, 0.05);
+  --tertiary: #e1e4e8;
+  --primary: #8b5cf6; /* Vibrant Purple */
+  --highlight: #f20089; /* Deep Neon Pink */
+  --error: #d90429;
+
+  --fast: #8b5cf6;
+  --normal: #f20089;
+  --slow: #d90429;
+
+  --island-bg: rgba(255, 255, 255, 0.7);
+  --island-fg: #8b5cf6;
+  --island-border: 1px solid rgba(139, 92, 246, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.1);
+
+  --shadow-glow: 0 0 15px rgba(139, 92, 246, 0.25);
+}
+
+/* Glass Nature */
+[data-theme='2'] {
+  --bg: #0f1c15;
+  --secondary: rgba(255, 255, 255, 0.1);
+  --tertiary: #1a2f24;
+  --primary: #4ade80;
+  --highlight: #facc15;
+  --error: #ef4444;
+
+  --fast: #4ade80;
+  --normal: #facc15;
+  --slow: #ef4444;
+
+  --island-bg: rgba(15, 28, 21, 0.6);
+  --island-fg: #4ade80;
+  --island-border: 1px solid rgba(74, 222, 128, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+
+  --shadow-glow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+/* Midnight Void */
+[data-theme='3'] {
+  --bg: #000000;
+  --secondary: #1a1a1a;
+  --tertiary: #333333;
+  --primary: #ffffff;
+  --highlight: #888888;
+  --error: #ff3333;
+
+  --fast: #ffffff;
+  --normal: #cccccc;
+  --slow: #990000;
+
+  --island-bg: rgba(0, 0, 0, 0.8);
+  --island-fg: #ffffff;
+  --island-border: 1px solid #333;
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-border: 1px solid #333;
+
+  --shadow-glow: 0 0 10px rgba(255, 255, 255, 0.2);
+}

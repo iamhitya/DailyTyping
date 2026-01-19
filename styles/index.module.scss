@@ -1,0 +1,119 @@
+.container {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  height: 100vh;
+
+  @media (max-width: 1600px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1400px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: 1200px) {
+    max-width: 800px;
+  }
+}
+
+.tips {
+  z-index: -1;
+
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: auto;
+  color: var(--primary);
+  opacity: 0.8;
+  width: 100%;
+  transition: opacity 200ms ease;
+  left: 0;
+  vertical-align: middle;
+
+  // hide when not typing
+  :global(body:not(.typing)) & {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  @media (max-width: 1500px) {
+    font-size: 12px;
+  }
+
+  kbd {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+    padding-top: 0.2em;
+    border-radius: 0.2em;
+    display: block;
+    margin-right: 10px;
+    border: 1px solid var(--primary);
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 0.2em;
+  color: var(--primary);
+  text-shadow: 0 0 20px var(--primary);
+  letter-spacing: 2px;
+
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+.startBtn {
+  background: var(--island-bg);
+  color: var(--primary);
+  border: var(--island-border);
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-glow);
+  outline: none;
+
+  &:hover {
+    transform: scale(1.05);
+    background: var(--primary);
+    color: var(--bg);
+    box-shadow: 0 0 30px var(--primary);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

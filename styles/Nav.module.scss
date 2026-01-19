@@ -1,0 +1,63 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--secondary);
+  --icon: var(--secondary);
+  font-size: 18px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // hide nav when typing starts
+  :global(body.typing) & {
+    opacity: 0;
+    transition: opacity 200ms ease;
+  }
+
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  a,
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    transition: color 200ms ease;
+
+    &:hover {
+      color: var(--primary);
+      --icon: var(--primary);
+    }
+  }
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.appName {
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
