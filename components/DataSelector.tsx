@@ -30,6 +30,27 @@ export const dataNameGroups = [
       'Java',
       'C#'
     ]
+  },
+  {
+    group: 'Spanish',
+    values: [
+      'Spanish 200',
+      'Spanish 1K',
+    ]
+  },
+  {
+    group: 'French',
+    values: [
+      'French 200',
+      'French 1K',
+    ]
+  },
+  {
+    group: 'German',
+    values: [
+      'German 200',
+      'German 1K',
+    ]
   }
 ]
 
@@ -40,7 +61,7 @@ export function DataSelector({ dispatch, handleClose }: Props) {
     <div className={styles.dataSelector}>
       {dataNameGroups.map(dataNameGroup => (
         <div key={dataNameGroup.group} className={styles.optionGroup}>
-          <h3 className={styles.groupTitle}> {dataNameGroup.group} </h3>
+          <h3 className={styles.groupTitle}>{dataNameGroup.group}</h3>
           <div className={styles.options}>
             {dataNameGroup.values.map(value => (
               <div
