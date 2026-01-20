@@ -128,27 +128,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
-
-**Hitesh Kumar**
-- GitHub: [@iamhitya](https://github.com/iamhitya)
-- X/Twitter: [@iamhitya](https://x.com/iamhitya)
-- LinkedIn: [iamhitya](https://www.linkedin.com/in/iamhitya/)
-
 ## 🌟 Acknowledgments
 
 - Inspired by modern typing practice applications
 - Built with ❤️ for the typing community
 - Special thanks to all contributors
 
+[![Contributors](https://contrib.rocks/image?repo=iamhitya/DailyTyping)](https://github.com/iamhitya/DailyTyping/graphs/contributors)
+
 ## 📧 Support
 
 If you have any questions or need help, feel free to reach out through:
 - Open an issue on GitHub
-- Contact via social media links above
-
----
-
-<div align="center">
-  Made with ❤️ by <a href="https://github.com/iamhitya">Hiteshkumar</a>
-</div>
