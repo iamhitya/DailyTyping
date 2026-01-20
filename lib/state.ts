@@ -23,7 +23,8 @@ const DEFAULT_APPEND_WORDS_COUNT = 200
 export function stateReducer(state: State, action: Action): void {
   switch (action.type) {
     case 'setData': {
-      loadedData[state.dataName] = action.data
+      state.dataName = action.dataName
+      loadedData[action.dataName] = action.data
       state.data = action.data
       // need to reset when setting new data
       reset(state)

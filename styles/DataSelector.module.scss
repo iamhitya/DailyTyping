@@ -11,17 +11,40 @@
   font-size: 14px;
   padding: 0.5em 1em;
   color: var(--island-fg);
-  border: 1px solid;
+  border: 1px solid var(--island-fg);
   cursor: pointer;
   border-radius: 0.4em;
   text-align: center;
+  transition: color 200ms ease, background-color 200ms ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .textArea {
   background-color: transparent;
   color: var(--island-fg);
-  resize: none;
+  border: 1px solid var(--island-fg);
+  border-radius: 0.4em;
+  resize: vertical;
   width: 100%;
+  padding: 0.5em 1em;
+  font-size: 14px;
+  font-family: inherit;
+  min-height: 100px;
+  margin-bottom: 15px;
+
+  &::placeholder {
+    color: var(--island-fg);
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--island-fg);
+    opacity: 1;
+  }
 }
 
 .groupTitle {
