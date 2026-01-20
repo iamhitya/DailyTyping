@@ -1,4 +1,4 @@
-import { Dispatch } from 'react'
+import { Dispatch, useState } from 'react'
 import { Action } from '../lib/types'
 import styles from '../styles/DataSelector.module.scss'
 
@@ -57,6 +57,8 @@ export const dataNameGroups = [
 type Props = { dispatch: Dispatch<Action>; handleClose: () => void }
 
 export function DataSelector({ dispatch, handleClose }: Props) {
+  const [customInput, setCustomInput] = useState("")
+
   return (
     <div className={styles.dataSelector}>
       {dataNameGroups.map(dataNameGroup => (
@@ -78,6 +80,18 @@ export function DataSelector({ dispatch, handleClose }: Props) {
           </div>
         </div>
       ))}
+        <textarea onChange={e => setCustomInput(e.target.value)} className={styles.textArea} placeholder='Copy and paste text here to make your own custom pactice!'></textarea>
+        <div
+            className={styles.customButton}
+            onClick={() => {
+              if (customInput){
+                handleClose()
+                dispatch({ type: 'setData', dataName: 'Custom', data: customInput.split(/\s+/gi)})
+              }
+            }}
+        >
+          Custom
+      </div>
     </div>
   )
 }
